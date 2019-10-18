@@ -118,7 +118,7 @@ img::-moz-selection {
 
 
 
-header.masthead {
+header.masthead, header.posthead {
   margin-bottom: 50px;
   background: no-repeat center center;
   background-color: #868e96;
@@ -127,7 +127,7 @@ header.masthead {
   background-size: cover;
 }
 
-header.masthead .overlay {
+header.masthead .overlay,header.posthead .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -139,7 +139,10 @@ header.masthead .overlay {
 
 header.masthead .page-heading,
 header.masthead .post-heading,
-header.masthead .site-heading {
+header.masthead .site-heading,
+header.posthead .page-heading,
+header.posthead .post-heading,
+header.posthead .site-heading {
   padding: 200px 0 150px;
   color: white;
 }
@@ -150,21 +153,37 @@ header.masthead .site-heading {
   header.masthead .site-heading {
     padding: 200px 0;
   }
+  header.posthead .page-heading,
+  header.posthead .post-heading,
+  header.posthead .site-heading  {
+    padding: 100px 0;
+  }
 }
 
 header.masthead .page-heading,
-header.masthead .site-heading {
+header.masthead .site-heading,
+header.posthead .page-heading,
+header.posthead .site-heading  {
   text-align: center;
 }
 
 header.masthead .page-heading h1,
-header.masthead .site-heading h1 {
+header.masthead .site-heading h1{
   font-size: 50px;
   margin-top: 0;
 }
 
+
+header.posthead .page-heading h1,
+header.posthead .site-heading h1 {
+  font-size: 30px;
+  margin-top: 0;
+}
+
 header.masthead .page-heading .subheading,
-header.masthead .site-heading .subheading {
+header.masthead .site-heading .subheading,
+header.posthead .page-heading .subheading,
+header.posthead .site-heading .subheading  {
   font-size: 24px;
   font-weight: 300;
   line-height: 1.1;
@@ -173,10 +192,26 @@ header.masthead .site-heading .subheading {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+header.posthead .post-meta{
+    float: right;
+}
+
+header.posthead .post-meta a{
+  color:white;
+}
+
+header.posthead .post-meta a:hover{
+  color:gray;
+}
+
 @media only screen and (min-width: 768px) {
   header.masthead .page-heading h1,
-  header.masthead .site-heading h1 {
+  header.masthead .site-heading h1{
     font-size: 80px;
+  }
+  header.posthead .page-heading h1,
+  header.posthead .site-heading h1 {
+    font-size: 50px;
   }
 }
 
@@ -206,6 +241,11 @@ header.masthead .post-heading .meta {
 
 header.masthead .post-heading .meta a {
   color: #fff;
+}
+
+
+.post-content{
+  margin: 30px 20%;
 }
 
 
@@ -412,5 +452,11 @@ footer .copyright {
   }
   header.masthead .post-heading .subheading {
     font-size: 30px;
+  }
+  header.posthead .post-heading h1 {
+    font-size: 45px;
+  }
+  header.posthead .post-heading .subheading {
+    font-size: 25px;
   }
 }
