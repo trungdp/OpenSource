@@ -27,10 +27,9 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         <% posts.forEach((item)=>{%>
           <%- include('home/post-item.ejs',{item:item}) %>
-          <hr>
         <%}); %>
         <div class="clearfix">
-          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+          <a class="btn btn-primary float-right" href="post">Older Posts &rarr;</a>
         </div>
       </div>
     </div>

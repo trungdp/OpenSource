@@ -8,6 +8,7 @@ body {
   font-size: 20px;
   color: #212529;
   font-family: 'Lora', 'Times New Roman', serif;
+  overflow-x: hidden;
 }
 
 p {
@@ -201,7 +202,7 @@ header.posthead .post-meta a{
 }
 
 header.posthead .post-meta a:hover{
-  color:gray;
+  color:#0085A1;
 }
 
 @media only screen and (min-width: 768px) {

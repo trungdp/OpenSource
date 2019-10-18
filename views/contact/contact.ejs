@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title><%= post.title%></title>
+  <title>Liên hệ</title>
   <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -19,9 +19,9 @@
 
 <body>
   <% include ../common/nav.ejs %>
-  <%- include('post-header.ejs',{post:post}) %>
+  <% include contact-header.ejs  %>
     
-  <%- include('post-content.ejs',{content:post.content}) %>
+  <!-- <v% include contact-form.ejs %> -->
   <% include ../common/footer.ejs %>
 
   <script src="./vendor/jquery/jquery.min.js"></script>

@@ -3,7 +3,7 @@ var express = require("express");
 var app = express();
 var server = require('http').createServer(app);
 var mysql = require('./database/db.js');
-var Post = require('./model/post.model');
+var Post = require('./models/Post');
 
 //Chỉ ra đường dẫn chứa css, js, images...
 app.use(express.static(path.join(__dirname, 'client')));
@@ -50,27 +50,7 @@ app.get("/post", function (req, res) {
 app.get("/admin", function (req, res) {
     res.render("admin/index");
 });
-const config = require("./config/mysql-config");
-var mysqlModel = require('mysql-model');
-var MyAppModel = mysqlModel.createConnection(config.sqlConfig);
-var Post = MyAppModel.extend({
-    tableName: "Post",
-});
-var post = new Post({
-    name: 'Serenity',
-    director: 'Joss Whedon',
-    language: 'English',
-    year: 2005
-});
-
-console.log(config.sqlConfig);
-post.find('all', function (err, result) {
-    // if(err) throw err;
-    // console.log(err);
-});
-
-mysql.connect(() => {
-
-});
-console.log(config.sqlConfig);
+app.get("/contact",(req,res)=>{
+    res.render("contact/contact");
+})
 server.listen(process.env.PORT || 8000);
